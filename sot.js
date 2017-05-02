@@ -9,7 +9,6 @@ var page=new Array();
 	page[2]= ['about',2,1]
 	page[3]= ['images',2,2]
 
-
 function sotOnLoad()
 	{
 	setPageDimensions();
@@ -18,12 +17,10 @@ function sotOnLoad()
 	setGalleries();
 	}
 
-
 function navigateHelp()
 	{
 	alert("use the *sweet* cake on the right to navigate ---->");
 	}
-
 
 function setPageDimensions()
 	{
@@ -51,7 +48,6 @@ function setPageDimensions()
 	currentPageHeight=viewportHeight;
 	}
 
-
 function snapBackForMe()
 	{
 	setPageDimensions();
@@ -63,7 +59,6 @@ function snapBackForMe()
 
 	window.scrollTo(shouldX,shouldY);
 	}
-
 
 function pageScroll(arrayPage)
 	{
@@ -215,9 +210,7 @@ cakeImages=[
 		"images/cakeBlank.jpg"
 		];
 
-
 var numberOfGalleries;
-	
 	function setGalleries()
 		{
 		if (cakeImages.length%9==0)
@@ -253,20 +246,13 @@ var numberOfGalleries;
 					cakeImages[x*9-1]
 					];
 				}
-
 			galleries[numberOfGalleries]=cakeImages.slice(((numberOfGalleries*9)-9),((numberOfGalleries*9)-(cakeImages.length%9)));
 			for(x=1;x<=(9-cakeImages.length%9);x++)
 				{
 				galleries[numberOfGalleries].push("images/cakeBlank.jpg");
 				}
 			}
-		
 		}
-
-
-
-
-
 
 var sotGalleryPage=1;
 function forGallery(direction,image)
@@ -377,7 +363,6 @@ var marginForSlideItDown;
 var imageForSlideItDown;
 var slideItDownReplacementImage;
 
-
 function slideItDown()
 	{
 	clearInterval(intervalForSlideItDown);
@@ -459,11 +444,7 @@ function span()
 
 var truncatinator= new truncatinator();
 
-//   for making the variables  //    for making the variables   //   for making the variables   //   for making the variables    //
-//_________________________________________________________________________________________________________________________________//
-//																   //
-// for setting spans, words, and properties // for setting spans, words, and properties // for setting spans, words, and properties// 
-
+// for setting spans, words, and properties 
 
 function setT()
 	{
@@ -846,7 +827,6 @@ function setOppositeIndices(aSpanSet)
 				}
 			}
 		}
-	
 	}
 
 function setOpeningTags(thisSpanSet)
@@ -865,7 +845,6 @@ function setOpeningTags(thisSpanSet)
 		}
 	thisSpanSet.openingTags=theOpeningTags;
 	}
-
 
 function setClosingTags(thisSpanSet)
 	{
@@ -1033,7 +1012,6 @@ function divSee(divName, divIs)
 	
 	}
 
-
 function toBeInsertedAtBeginningOf(array,insertedPart)
 	{
 	thisArray = array;
@@ -1060,7 +1038,6 @@ function getSpanSetByName(checkName)
 		}
 	return thisReturn;
 	}
-
 
 function setWordProps(spanSet)
 	{
@@ -1138,7 +1115,6 @@ function showTContents(array,part)
 	return toReturn;
 	}
 
-
 //  for resizing stuff  
 
 function sotResize()
@@ -1162,17 +1138,15 @@ function sotLoad()
 	imageSizer();
 	}
 
-
 function retruncatinate()
 	{
-
 	if(truncatinator.spanSets[0]==undefined){}else{
 		for(x=0;x<truncatinator.spanSets.length;x++)
 			{
 			truncatinate(truncatinator.spanSets[x]);
 			}
-	}}
-
+	}
+}
 
 window.onload = sotLoad; 
 window.onresize = sotResize;
